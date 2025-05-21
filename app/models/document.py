@@ -1,5 +1,10 @@
 from pydantic import BaseModel
 from typing import List, Optional
+from app.models.enums import DocumentSource
+
+class DocumentRequest(BaseModel):
+    id: str
+    source: DocumentSource
 
 class DocumentMetadata(BaseModel):
     file_id: str
